@@ -1,0 +1,15 @@
+
+<h1>Chuukese Writing</h1>
+
+<% @chuuks.each do |chuuk| %>
+<div class="row">
+  <div class="span4">
+    <%= image_tag chuuk.picture_url, :width => '100%' if chuuk.picture.present?%>
+    <h4><%= link_to chuuk.search, chuuk %></h4>
+    <%= chuuk.spelling %>
+  </div>
+<% end %>
+
+<br />
+
+<%= link_to 'New Chuuk', new_chuuk_path %>

@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+  <div class="span9">
+    <%= image_tag(@chuuk.picture_url, :width => "100%") if @chuuk.picture.present? %>
+  </div>
+
+  <div class="span3">
+    <p><b>Search: </b><%= @chuuk.search %></p>
+    <p><b>Spelling: </b><%= @chuuk.spelling %></p>
+    <p>
+      <%= link_to 'Edit', edit_chuuk_path(@chuuk) %> |
+      <%= link_to 'Destroy', @chuuk, confirm: 'Are you sure?', method: :delete %> |
+      <%= link_to 'Back', chuuks_path %>
+    </p>
+  </div>
+</div>
